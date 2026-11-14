@@ -4,13 +4,15 @@ from dotenv import load_dotenv
 from langchain_groq import ChatGroq
 from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
 from langchain_chroma import Chroma
-from langchain_huggingface.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface.embeddings.fastembed import FastEmbedEmbeddings
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-load_dotenv()
-
-load_dotenv()
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
 
 # Safely check Streamlit Cloud Secrets without crashing locally when secrets.toml doesn't exist
 if not os.getenv("GROQ_API_KEY"):
@@ -26,7 +28,7 @@ st.title("⚛️ Sheldon Cooper AI (with RAG & Memory)")
 @st.cache_resource
 def init_rag_and_models():
     model = ChatGroq(model="openai/gpt-oss-120b")
-    embedding_fn = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+    embedding_fn = FastEmbedEmbeddings(model_name="BAAI/bge-small-en-v1.5")
 
     vectorstore = Chroma(
         collection_name="chat_history",
