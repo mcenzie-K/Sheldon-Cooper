@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from langchain_groq import ChatGroq
 from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
 from langchain_chroma import Chroma
-from langchain_huggingface.embeddings.fastembed import FastEmbedEmbeddings
+from langchain_community.embeddings.fastembed import FastEmbedEmbeddings
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
