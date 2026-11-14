@@ -1,0 +1,21 @@
+s parameters are used for the analysis of following devices: microwave devices(isolator,coupler), RF circuit, antenna, waveguides , transmission lines
+At microwave frequency it is not possible to measure instantaneuos voltage and current.
+As frequency becomes high and wavelength becomes so low that it is comparable to the length of the circuit itself.
+Leading to sudden changes in signals making it hard to calculate and keep track of voltage and current.
+microwave devices have frequency dependent characteristics.
+H,Z,ABCD,Y are applicable at lower frequency
+then there's Sij= normalized output wave at ith port / normalized input at jth port
+
+mpc(multi  - uses this mathematical model) 
+
+kinetic bicycle model 
+x(t+1)=x(t) + v(T)cos(x).dty
+same for y
+y(t) , x(t) , v(t+1)=v(t) +a(t).dt
+
+tanb -steerng angle 
+frenet lattice - frenet is a coordinated system and lattice is a structured set of candidate path. normal one uses center path as relative path to calculate two values s and d . s - how far along we moved in the reference path , d -how far sideways . our difference is we use drivable corridor ( a cebterline + left a+ right half width that are present 
+3 sensor . 1 camera depth error as distance. 2 lidar short range but accurate 3 longer distance radar but struggles to distinguish between two parallel vehicles approaching at asame time  
+
+
+# reliance foundation - for 1st year 
