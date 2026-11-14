@@ -22,7 +22,7 @@ if not os.getenv("GROQ_API_KEY"):
         pass
 
 st.set_page_config(page_title="Sheldon Cooper AI", page_icon="⚛️")
-st.title("⚛️ Sheldon Cooper AI (with RAG & Memory)")
+st.title("⚛️ Fun with Sheldon Cooper")
 
 # 1. Cache models & vector databases so they only load ONCE
 @st.cache_resource
