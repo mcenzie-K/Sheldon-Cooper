@@ -28,7 +28,7 @@ st.title("⚛️ Sheldon Cooper AI (with RAG & Memory)")
 @st.cache_resource
 def init_rag_and_models():
     model = ChatGroq(model="openai/gpt-oss-120b")
-    embedding_fn = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004")
+    embedding_fn = GoogleGenerativeAIEmbeddings(model="gemini-embedding-001")
 
     vectorstore = Chroma(
         collection_name="chat_history",
