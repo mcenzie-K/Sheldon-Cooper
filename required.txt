@@ -3,7 +3,7 @@ python-dotenv
 langchain-groq
 langchain-core
 langchain-chroma
-langchain-huggingface
+fastembed
 langchain-community
 langchain-text-splitters
 sentence-transformers
